@@ -1,8 +1,8 @@
 {
   "name": "You2PHP",
   "description": "基于PHP的YouTube代理应用",
-  "website": "https://github.com/test/",
-  "repository": "https://github.com/test/you2php-heroku",
+  "website": "https://github.com/zyp997/",
+  "repository": "https://github.com/zyp997/you2php-heroku",
   "env": {
     "APIKEY": {
       "description": "Youtube API V3 KEY",
