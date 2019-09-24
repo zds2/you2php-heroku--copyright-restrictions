@@ -8,8 +8,8 @@
       "description": "Youtube API V3 KEY",
       "value": "AIzaSyDOy40AKnOUvotuyMJ8Fk9guYbecB3ZUXo"
     },
-    "PLAYLIST_ID": {
-      "description": "推荐内容 Playlist ID",
+    "PROJECT_ID": {
+      "description": "PROJECT ID",
       "value": "PLLOFsS_xM0Rx0FvJ11eS-Mxomo4xLJUD_"
     }
   }
