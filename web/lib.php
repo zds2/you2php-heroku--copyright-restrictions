@@ -418,13 +418,13 @@ function strdecode($string,$key='09KxDsIIe|+]8Fo{YP<l+3!y#>a$;^PzFpsxS9&d;!l;~M>
 }
 
 //分享功能
-function shareit($id,$title='免Youtube'){
+function shareit($id,$title='免翻墙Youtube镜像'){
     $pic=ROOT_PART.'/thumbnail.php?vid='.$id;
     $url=ROOT_PART.'watch-'.$id.'.html';
     $title=str_replace('&','||',$title);
     $title=str_replace('"',' ',$title);
      $title=str_replace("'",' ',$title);
-   $des='【免Youtube】我正在通过这个网站看《'.$title.'》不用翻墙看全球视频，手机电脑都能看，快来试试吧！';
+   $des='【免翻墙Youtube镜像】我正在通过这个网站看《'.$title.'》不用翻墙看全球视频，手机电脑都能看，快来试试吧！';
     return "<div id='share'>
   <a class='icoqz' href='https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=".$url."&desc=".$des."&title=".$titlel."
 &pics=".$pic."' target='blank' title='分享到QQ空间'><i class='iconfont icon-qqkongjian icofontsize'></i></a>

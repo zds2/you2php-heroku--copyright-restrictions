@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
 <head>
-    <title>安装！</title>
+    <title>You2PHP安装！</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="https://wangxiaoqing123.coding.me/hellocss.coding.me/pintuer.css">
@@ -233,21 +233,21 @@ default:
     <div class="panel-body">
         <div id="a5" class="margin-small"></div>
         <div class="padding" id="a3">
-                    <p  class="text-large padding-big-bottom text-center">使用许可协议</p>
-<p class="height-small">感谢您选择。这是一个新颖的Youtube视频流量转发程序。</p>
+                    <p  class="text-large padding-big-bottom text-center">You2PHP使用许可协议</p>
+<p class="height-small">感谢您选择You2PHP。这是一个新颖的Youtube视频流量转发程序。</p>
 <p class="height-small">本软件为开源软件，遵循&nbsp;<span style="text-decoration: underline; color: #3366ff;"><a style="color: #3366ff; text-decoration: underline;" href="http://www.gnu.org/licenses/gpl.html">GPL</a></span>&nbsp;(GNU General Public License)开源协议</p>
 <p class="height-small">本软件版权归作者Anonymous所有，任何个人或组织，可以不经过原作者许可的情况下，对本程序源代码进行改动以及二次开发，但禁止将修改后的程序进行商业盈利，必须开源。</p>
 <p class="height-small">无论您的用途如何，均需仔细阅读本协议，在理解、同意、并遵守本协议的全部条款后，方可开始使用本软件。</p>
 <h2>使用者必看</h2><hr>
-<p>使用者必须要做到以下这几点才能继续安装！！</p>
+<p>使用者必须要做到以下这几点才能继续安装You2PHP！！</p>
 <ul>
-<li><strong>不要</strong>在中国大陆网络商家提供的主机或服务器上安装。如腾讯云 阿里云 !!!</li>
+<li><strong>不要</strong>在中国大陆网络商家提供的主机或服务器上安装You2PHP。如腾讯云 阿里云 !!!</li>
 <li><strong>不要</strong>给您的服务器或主机绑定已经备案的域名，更不要绑定CN域名 !!!</li>
-<li><strong>不要</strong>轻易在网络上传播您的站点URL，只能分享给您信任的人使用，大规模传播容易造成域名被和谐或其他严重后果！强烈建议您按照<a href="http://blog.csdn.net/chszs/article/details/46481573" target="_blank" style="color: #3366ff; text-decoration: underline;">用Apache的HTACCESS保护网站</a>这个最简单方法给你的站点上锁，防止其他人访问。</li>
+<li><strong>不要</strong>轻易在网络上传播您的You2PHP站点URL，只能分享给您信任的人使用，大规模传播容易造成域名被和谐或其他严重后果！强烈建议您按照<a href="http://blog.csdn.net/chszs/article/details/46481573" target="_blank" style="color: #3366ff; text-decoration: underline;">用Apache的HTACCESS保护网站</a>这个最简单方法给你的站点上锁，防止其他人访问。</li>
 <li><strong>如果有条件可以为你的站点启用SSL</strong>，通过HTTPS访问更稳定！</li>
 </ul><hr>
 <h2>开源协议</h2><hr>
-<p> 采用 &nbsp;<a href="http://www.gnu.org/licenses/gpl.html">GPL</a>&nbsp;开源协议：</p>
+<p>You2PHP 采用 &nbsp;<a href="http://www.gnu.org/licenses/gpl.html">GPL</a>&nbsp;开源协议：</p>
 <ul>
 <li>您可以自由改动源代码，但不允许封闭修改后源代码。</li>
 <li>如果您对遵循 GPL 的软件进行任何改动和/或再次开发并予以发布，则您的产品必须继承 GPL 协议，不允许封闭源代码。</li>
@@ -256,8 +256,8 @@ default:
 <h2>免责声明</h2><hr>
 <ul>
 <li>您拥有使用本软件构建的网站全部内容所有权，并独立承担与这些内容的相关法律义务。</li>
-<li>用户出于自愿而使用本软件，您必须了解使用本软件的风险，并遵守当地相关法律规定，不承担任何因使用本软件而产生问题的相关责任。</li>
-<li>不对使用本软件构建的网站中的任何视频内容或信息承担责任。</li>
+<li>用户出于自愿而使用本软件，您必须了解使用本软件的风险，并遵守当地相关法律规定，You2PHP不承担任何因使用本软件而产生问题的相关责任。</li>
+<li>You2PHP不对使用本软件构建的网站中的任何视频内容或信息承担责任。</li>
 </ul>
         </div>
         <div class="text-center">
