@@ -1,6 +1,6 @@
 {
   "name": "You2PHP",
-  "description": "基于PHP的YouTube应用",
+  "description": "基于PHP的YouTube代理应用",
   "website": "https://github.com/zyp997/",
   "repository": "https://github.com/zyp997/you2php-heroku",
   "env": {
