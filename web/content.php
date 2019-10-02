@@ -6,22 +6,22 @@ $sortid = $_GET['sortid'];
 $order  = isset($_GET['order']) ? $_GET['order'] : 'relevance';
 switch ($cont) {
 case 'history':
-    $headtitle='观看记录'.' - '.SITE_NAME;
+    $headtitle='历史记录-油桶';
 	break;
 case 'category':
-    $headtitle=categorieslist($sortid).' - '.SITE_NAME;
+    $headtitle=categorieslist($sortid).'-'.SITE_NAME;
 	break;
 case 'trending':
-    $headtitle='时下流行'.' - '.SITE_NAME;
+    $headtitle='时下流行'.'-'.SITE_NAME;
 	break;
 case 'DMCA':
-    $headtitle='免责声明'.' - '.SITE_NAME;
+    $headtitle='DMCA'.'-'.SITE_NAME;
 	break;
 case 'video':
-    $headtitle='视频下载'.' - '.SITE_NAME;
+    $headtitle='视频下载工具'.'-'.SITE_NAME;
 	break;
 case 'api':
-    $headtitle='API'.' - '.SITE_NAME;
+    $headtitle='API油桶'.'-'.SITE_NAME;
 	break;
 
 }
