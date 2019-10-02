@@ -1,4 +1,9 @@
+ <footer class="p-2">
+        <p  class="text-white p-1 m-1 h6">
+         Copyright &copy; 2018 BCLSWL.<br>All rights reserved.
+        </p>
     </footer>
+  
   
   <script src="https://cdn.bootcss.com/popper.js/1.11.0/umd/popper.min.js"></script>
   <script src="https://cdn.bootcss.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>

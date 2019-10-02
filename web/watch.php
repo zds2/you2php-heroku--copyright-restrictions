@@ -56,7 +56,6 @@ if (in_array($videodata['items']['0']['id'] ,$histmp)){
                 <span class="pull-right"><i class="fa fa-eye"></i> <?php echo convertviewCount($videodata['items']['0']['statistics']['viewCount']) ?></span> 
                 
                 <div class="pt-3" style="clear: both;">
-		<p style="color: deeppink;">温馨提示：当视频无法正常播放时请点击 <a href="./content.php?cont=video&v=<?php echo $videodata['items']['0']['id'] ?>" target="_blank" style="color: brown;font-weight: bold;">下载</a> 进行观看</p>
                     <p id="des"><?php 
         				if(!empty($videodata['items']['0']['snippet']['description'])){ 
         				    preg_match_all('#\bhttps?://[^,\s()<>]+(?:\([\w\d]+\)|([^,[:punct:]\s]|/))#', $videodata['items']['0']['snippet']['description'], $match);
@@ -67,7 +66,7 @@ if (in_array($videodata['items']['0']['id'] ,$histmp)){
         				    }
         				     echo $description;
         				    } else { 
-        				        echo '^_^';
+        				        echo '没有简介呢......';
         				};
 			         ?>   
                     </p>
@@ -75,14 +74,14 @@ if (in_array($videodata['items']['0']['id'] ,$histmp)){
 				<div id="read-more"></div>
 				
                 </div>
-                <span class="pull-left ">类别<a href="./content.php?cont=category&sortid=<?php echo $videodata['items']['0']['snippet']['categoryId']?>" class="pl-2 d-inline"  target="_blank"><?php echo categorieslist($videodata['items']['0']['snippet']['categoryId'])?></a>
+                <span class="pull-left">归类<a href="./content.php?cont=category&sortid=<?php echo $videodata['items']['0']['snippet']['categoryId']?>" class="pl-2 d-inline" target="_blank"><?php echo categorieslist($videodata['items']['0']['snippet']['categoryId'])?></a>
                 </span>
                 <span class="pull-right">
                     <span id="fxs" data-toggle="popover" title="分享" data-html="true" data-placement="left" data-content="<?php echo shareit($videodata['items']['0']['id'],$videodata['items']['0']['snippet']['title']);?>">
                     <i class="fa fa-share-square-o pr-1"></i>分享
                 </span>
                 <span class="pr-1">
-                    <a href="./content.php?cont=video&v=<?php echo $videodata['items']['0']['id'] ?>" target="_blank" class="fsize2"><i class="fa fa-share-square-o pr-1"></i>下载</a>
+                    <a href="./content.php?cont=video&v=<?php echo $videodata['items']['0']['id'] ?>" target="_blank" class="fsize2"><i class="fa fa-arrow-down pr-1"></i>下载</a>
                 </span>
                 </span>
              </div>
@@ -97,7 +96,7 @@ if (in_array($videodata['items']['0']['id'] ,$histmp)){
                     
                     </span>
                     
-                    <a href="./channel.php?channelid=<?php echo $videodata['items']['0']['snippet']['channelId'] ?>" class="btn btn-sm btn-c pull-right fsize2 my-1"><p class="text-primary m-0 px-2">主页</p></a>
+                    <a href="./channel.php?channelid=<?php echo $videodata['items']['0']['snippet']['channelId'] ?>" class="btn btn-sm btn-c pull-right fsize2 my-1"><p class="text-primary m-0 px-2">个人主页</p></a>
                    
                 </div>
         <div id="tags" class="w-100 pb-2 vinfo">
@@ -114,7 +113,7 @@ if (in_array($videodata['items']['0']['id'] ,$histmp)){
          <div class="col-md-4 col-sm-12 col-xs-12 col-lg-4 related">
             <div class="font-weight-bold h6 pb-1">相关内容</div> 
             <div id="videocontent"></div>
-            <script>$("#videocontent").load('./ajax/ajax.php?type=playlist&plid=<?php echo PLAYLIST_ID ?>');</script>
+            <script>$("#videocontent").load('<?php echo './ajax/ajax.php?v='.$_GET['v'].'&type=related'?>');</script>
          </div>
     </div>
 </div>
