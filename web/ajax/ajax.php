@@ -16,7 +16,7 @@ ini_set('error_log', dirname(__FILE__) . '/error_log.txt');
     	case 'video':
             	   $videodata=get_search_video($q,APIKEY,$ptk,'video',$order,GJ_CODE);
             	   	if($videodata['pageInfo']['totalResults']<=1){
-    		    echo'<div class="alert alert-danger h4 p-3 m-2" role="alert">抱歉，没有找到与 <strong>'.urldecode($q).'</strong> 有关的视频。</div>';
+    		    echo'<div class="alert alert-danger h4 p-3 m-2" role="alert">抱歉，没有找到与<strong>'.urldecode($q).'</strong>相关的视频。</div>';
     		    exit;
     		}
             	   echo '<ul  class="list-unstyled  video-list-thumbs row pt-1">';
@@ -150,20 +150,20 @@ ini_set('error_log', dirname(__FILE__) . '/error_log.txt');
      }	
     		break;
     case 'menu':
-        $vica=videoCategories();
+        $vica=videoCategories(APIKEY,GJ_CODE);
         
         echo '<ul class="list-group text-dark">
         <li class="list-group-item font-weight-bold"><i class="fa fa-home fa-fw pr-4"></i><a href="./" class="text-dark">首页</a></li>
         <li class="list-group-item"><i class="fa fa-fire fa-fw pr-4"></i><a href="./content.php?cont=trending" class="text-dark">时下流行</a></li>
-        <li class="list-group-item"><i class="fa fa-history fa-fw pr-4"></i><a href="./content.php?cont=history" class="text-dark">观看记录</a></li>
-        <li class="list-group-item"><i class="fa fa-gavel fa-fw pr-4"></i><a href="./content.php?cont=DMCA"class="text-dark">免责声明</a></li>
+        <li class="list-group-item"><i class="fa fa-history fa-fw pr-4"></i><a href="./content.php?cont=history" class="text-dark">历史记录</a></li>
+        <li class="list-group-item"><i class="fa fa-gavel fa-fw pr-4"></i><a href="./content.php?cont=DMCA"class="text-dark">DMCA</a></li>
         <li class="list-group-item"><i class="fa fa-cloud-download fa-fw pr-4"></i><a href="./content.php?cont=video" class="text-dark">视频下载</a></li>
         <li class="list-group-item"><i class="fa fa-file-code-o fa-fw pr-4 pr-4"></i><a href="./content.php?cont=api" class="text-dark">API</a></li>
         </ul>
         <ul class="list-group pt-3">
-        <li class="list-group-item font-weight-bold"></i>精选</li>
+        <li class="list-group-item font-weight-bold"></i>YOUTUBE 精选</li>
         ';
-        foreach($vica as $v){
+        foreach($vica['items'] as $v){
         echo '<li class="list-group-item"><a href="./content.php?cont=category&sortid='.$v['id'].'" class="text-dark">'.$v['snippet']['title'].'</a></li>';    
         }
         echo '</ul>';
@@ -188,7 +188,7 @@ ini_set('error_log', dirname(__FILE__) . '/error_log.txt');
     
       
     case 'DMCA':
-        echo '<div class="font-weight-bold h6 pb-1">DMCA 及免责声明</div>';
+        echo '<div class="font-weight-bold h6 pb-1">DMCA及免责声明</div>';
         echo '<h6><b>DMCA：</b><h6>';
         echo '<p class="h6" style="line-height: 1.7">This site video content from the Internet.<br>
 If inadvertently violate your copyright.<br>
@@ -223,7 +223,7 @@ echo '<h6 class="pt-3"><b>用户须知：</b><h6>';
         echo '<form  onsubmit="return false" id="ipt">
   <div class="form-group text-center" >
   <input name="type" value="videodownload" style="display: none;">
-      <input type="text" name="link"  placeholder="请输入视频链接" id="soinpt"  autocomplete="off" /><button type="submit" id="subu" style="width: 24%;vertical-align:middle;border: none;height: 50px;background-color: #e62117;color: #fff;font-size: 18px;display: inline-block;" ><i class="fa fa-download fa-lg pr-1"></i>下载</button>
+      <input type="text" name="link"  placeholder="请输入Youtube视频链接" id="soinpt"  autocomplete="off" /><button type="submit" id="subu" style="width: 24%;vertical-align:middle;border: none;height: 50px;background-color: #e62117;color: #fff;font-size: 18px;display: inline-block;" ><i class="fa fa-download fa-lg pr-1"></i>下载</button>
   </div>
     </form>';
     if(isset($_GET['type']) && isset($_GET['v'])){
@@ -234,7 +234,7 @@ echo '<h6 class="pt-3"><b>用户须知：</b><h6>';
         echo video_down($_GET['v'],$viddata['items']['0']['snippet']['title']);  
         echo '</div>';
     }else{
-        echo '<div id="videoslist" class="text-center"><p>如果无法下载,请选择右键另存为!<p></div>'; 
+        echo '<div id="videoslist" class="text-center"><p>提示:如果无法下载,请选择右键另存为!<p></div>'; 
     }
     echo '<script>
      $("#subu").click(function() {$("#videoslist").load(\'./ajax/ajax.php\',$("#ipt").serialize());});
@@ -277,10 +277,10 @@ echo '<h6 class="pt-3"><b>用户须知：</b><h6>';
     
     case 'history':
     $hisdata=Hislist($_COOKIE['history'],APIKEY);
-    echo '<div class="font-weight-bold h6 pb-1">观看记录</div> ';
+    echo '<div class="font-weight-bold h6 pb-1">历史记录</div> ';
        if($hisdata['pageInfo']['totalResults'] ==0){echo '<div class="alert alert-warning" role="alert"><h4 class="alert-heading">历史记录</h4>
-  <p>您还没有观看过任何视频。</p>
-  <p class="mb-0">本站使用cookies临时存储您的历史记录在您的浏览器上，本站不会对您的观看历史进行保存，仅记录您的最后 30 条浏览记录，若您清理过你的浏览器 cookies，将无法恢复！</p>
+  <p>抱歉！您还没有观看过任何视频！</p>
+  <p class="mb-0">本站使用cookies临时存储您的历史记录在您的浏览器上，本站不会对您的观看历史进行保存，仅记录您的最后30条浏览记录，若您清理过你的浏览器cookies，将无法恢复！</p>
 </div>';exit();}           
                 foreach($hisdata["items"] as $v) {
                 $description = strlen($v['snippet']['description']) > 250 ? substr($v['snippet']['description'],0,250)."...." : $v['snippet']['description'];
