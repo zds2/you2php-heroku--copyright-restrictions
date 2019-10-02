@@ -1,4 +1,5 @@
 <?php
+    ob_start();
     include('./lib.php');
     if(!is_array($_GET)&&count($_GET)>0){
         exit();
